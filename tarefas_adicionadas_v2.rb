@@ -2,8 +2,8 @@ require 'rally_rest_api'
 require 'date'
 
 # 'Login to the Rally App'
-@user_name = "hamilton.fonte@abril.com.br"
-@password = ".phantom2"
+@user_name = "your_login"
+@password = "your_password"
 @base_url = "https://rally1.rallydev.com/slm"
 @statistics = Hash.new()
 @addedTasksByTag = Hash.new(Array.new)
