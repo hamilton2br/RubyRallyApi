@@ -7,7 +7,7 @@ require 'rally_rest_api'
 
 rally = RallyRestAPI.new(:base_url => @base_url, :username => @user_name, :password => @password)
 
-it_result  = rally.find(:iteration) {equal :object_i_d, "7936083278"}
+it_result  = rally.find(:iteration) {equal :object_i_d, "7936115515"}
 
 iteration = it_result.results.first
 

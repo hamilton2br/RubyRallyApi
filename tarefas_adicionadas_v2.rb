@@ -28,7 +28,7 @@ def BuildStoryStatistics (aUserStory)
                                                         @addedTasksByTag["No Tag"] += [task.name]
 						else
 							#adicionar a tarefas por tags
-                                                        task.tags.each { |tag| @addedTasksByTag[tag] += [task.name] }
+                                                        task.tags.each { |tag| @addedTasksByTag[tag.name] += [task.name] }
 						end
 
 						numAddedTasks = numAddedTasks + 1
@@ -48,7 +48,7 @@ rally = RallyRestAPI.new(:base_url => @base_url, :username => @user_name, :passw
 
 @statistics["Totais"] = [0,0,"0"]
 
-it_result  = rally.find(:iteration) {equal :object_i_d, "7936083278"}
+it_result  = rally.find(:iteration) {equal :object_i_d, "7936115515"}
 
 iteration = it_result.results.first
 
@@ -63,4 +63,5 @@ us_result.each { |userStory| BuildStoryStatistics(userStory) }
 					"% alteracao: " + @statistics[key][2] + "\n\n" }
 puts "Tarefas adicionadas por tag:\n"
 
-@addedTasksByTag.each_key { |key| puts key + " - " + @addedTasksByTag[key].count.to_s }
+@addedTasksByTag.each_pair { |key, values| print key + "\t" + 
+				values.count.to_s + "\t" + format("%.2f", (values.count.to_f/@statistics["Totais"][1].to_f)*100) + "\n" }

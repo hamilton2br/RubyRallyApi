@@ -1,55 +1,27 @@
-US15404
-Aumentar cobertura de testes
-Colocar projeto no sonar
-corrigir problemas no add
-Verificar problemas no add
-executar os ct`s migrada p/ nova estórias.
-testes exploratórios, novas ct`s
-organizar os defects no really.
-Validação dos bugs e da estória.
-US15317 
-pinocitose do satangoss pelo crawler
-estudo da solução
-documentação
-mudança da task para agendamento por código
-crawler de urls do feed
-enterrar Satangoss
-leitor de feed
-validação da estória 
-análise e entendimento do fluxo simulação etc.
-Execução dos cts para garantir o crawleamento de conteúdo https.
-planejamento dos testes  a serem realizados.
-garantir na ambientes que o satangoss morreu.
-US14976
-Listar funcionalidade que já usamos
-Listar funcionalidade nova
-Doc da avaliação
-US13082
-voltar extrair source planetinha.
-deploy produção.
-custom-metatag
-deploy dev
-deploy qa.
-deploy stage
-recrawl
-validar que os documentos retornam no índice
-validar alteração no custom metatag.
-US14975
-principais métricas gerais
-modelagem DB
-organizar repositório
-implementação
-estudar solução
-execução do cts`
-planejamento c/ criação de cts
-validação da estória
-US15304
-refactory do filtro de syn.
-modelagem do syn. No banco
-Timer assíncrono para atualizar syn.
-Atualizar Hubble p/ request
-Documentação
-Analise e entendimento do problema
-Planejar os cts para garantir a estória
-Execução dos cts
-Validação da estória
+US15266
+Implementar filtros
+Alterar Open-Search Descriptor
+Casos de teste
+Execução de casos de teste
+US15471
+Conversar com o Samuka (Rocha/Deny/H2)
+Documentar decisão
+US14544
+Implementar mecanica de fichas no data-entry
+Implementar HTML da Aba
+Implementar form de linha do tempo
+Implementar representação da linha do tempo
+Implementar toggler
+Implementar representação de midia
+Caso de teste
+Execução caso de teste
+Validar persistência dos campos no POST e no PUT
+US14532
+Validar a imersidão
+US14552
+Replicar mecânica de buscas do Dom Estabelecimento
+Implementar Filtros
+Validar viabilidade de OR no MONGO
+Criar Open-Search descriptor
+Caso de teste
+Execução de caso de teste
