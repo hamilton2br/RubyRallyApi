@@ -61,7 +61,10 @@ us_result.each { |userStory| BuildStoryStatistics(userStory) }
 @statistics.each_key { |key|  print "\n" + key + "\n\t" + "Total Tarefas: " + @statistics[key][0].to_s + "\n\t" + 
 					"Tarefas Adicionadas: " + @statistics[key][1].to_s + "\n\t" + 
 					"% alteracao: " + @statistics[key][2] + "\n\n" }
-puts "Tarefas adicionadas por tag:\n"
+puts "Tarefas adicionadas por tag:\n-------------\n"
 
-@addedTasksByTag.each_pair { |key, values| print key + "\t" + 
-				values.count.to_s + "\t" + format("%.2f", (values.count.to_f/@statistics["Totais"][1].to_f)*100) + "\n" }
+@addedTasksByTag.each_pair { |key, values| print "-" + key + "\t" + 
+				values.count.to_s + "\t" + format("%.2f", (values.count.to_f/@statistics["Totais"][1].to_f)*100) + "\n"
+				values.each { |value| print "\t" + value + "\n"}
+				print "\n"
+			   }
