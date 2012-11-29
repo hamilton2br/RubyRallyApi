@@ -2,8 +2,8 @@ require 'rally_rest_api'
 require 'date'
 
 # 'Login to the Rally App'
-@user_name = "your_login"
-@password = "your_password"
+@user_name = "your@ema.il"
+@password = "password"
 @base_url = "https://rally1.rallydev.com/slm"
 @statistics = Hash.new()
 @addedTasksByTag = Hash.new(Array.new)
@@ -14,27 +14,32 @@ require 'date'
 def BuildStoryStatistics (aUserStory)
 
 	print ".\n"
-	numTasks = aUserStory.tasks.count
+	numTasks = 0
 	numAddedTasks = 0
 
-	aUserStory.tasks.each 	{ |task|
-					tDate = Date.parse(task.creation_date.to_s)
-					iDate = Date.parse(task.iteration.start_date.to_s)
-				 
-					if (tDate.to_time.to_i - iDate.to_time.to_i > 0) then 
-						#task foi criada depois do inicio da sprint
-						if task.tags.nil? then
-							#adicionar a tarefas sem tag
-                                                        @addedTasksByTag["No Tag"] += [task.name]
-						else
-							#adicionar a tarefas por tags
-                                                        task.tags.each { |tag| @addedTasksByTag[tag.name] += [task.name] }
+	if !aUserStory.tasks.nil? then
+
+		numTasks = aUserStory.tasks.count
+
+		aUserStory.tasks.each 	{ |task|
+						tDate = Date.parse(task.creation_date.to_s)
+						iDate = Date.parse(task.iteration.start_date.to_s)
+					 
+						if (tDate.to_time.to_i - iDate.to_time.to_i > 0) then 
+							#task foi criada depois do inicio da sprint
+							if task.tags.nil? then
+								#adicionar a tarefas sem tag
+								@addedTasksByTag["No Tag"] += [task.name]
+							else
+								#adicionar a tarefas por tags
+								task.tags.each { |tag| @addedTasksByTag[tag.name] += [task.name] }
+							end
+
+							numAddedTasks = numAddedTasks + 1
 						end
-
-						numAddedTasks = numAddedTasks + 1
-					end
-				} 
-
+					} 
+	end
+	
 	@statistics[aUserStory.formatted_i_d + "-" + aUserStory.name] = [numTasks,numAddedTasks, format("%.2f",(numAddedTasks.to_f/numTasks.to_f)*100)]
 	@statistics["Totais"][0] = @statistics["Totais"][0] + numTasks
 	@statistics["Totais"][1] = @statistics["Totais"][1] + numAddedTasks
@@ -48,7 +53,7 @@ rally = RallyRestAPI.new(:base_url => @base_url, :username => @user_name, :passw
 
 @statistics["Totais"] = [0,0,"0"]
 
-it_result  = rally.find(:iteration) {equal :object_i_d, "7936115515"}
+it_result  = rally.find(:iteration) {equal :object_i_d, "7936117743"}
 
 iteration = it_result.results.first
 

@@ -1,27 +1,24 @@
-US15266
-Implementar filtros
-Alterar Open-Search Descriptor
-Casos de teste
-Execução de casos de teste
-US15471
-Conversar com o Samuka (Rocha/Deny/H2)
-Documentar decisão
-US14544
-Implementar mecanica de fichas no data-entry
-Implementar HTML da Aba
-Implementar form de linha do tempo
-Implementar representação da linha do tempo
-Implementar toggler
-Implementar representação de midia
+US14543
+Data-Entry-Rota para consumir sugestoes
+Data-Entry-Copiar o modal de estabelecimentos
+Data-Entry-Componentizacao de modal de sugestao
 Caso de teste
-Execução caso de teste
-Validar persistência dos campos no POST e no PUT
-US14532
-Validar a imersidão
-US14552
-Replicar mecânica de buscas do Dom Estabelecimento
-Implementar Filtros
-Validar viabilidade de OR no MONGO
-Criar Open-Search descriptor
+Execucao caso de teste
+US14543
+Data-Entry-Rota para consumir sugestoes
+Data-Entry-Copiar o modal de estabelecimentos
+Data-Entry-Componentizacao de modal de sugestao
 Caso de teste
-Execução de caso de teste
+Execucao caso de teste
+US14543
+Data-Entry-Rota para consumir sugestoes
+Data-Entry-Copiar o modal de estabelecimentos
+Data-Entry-Componentizacao de modal de sugestao
+Caso de teste
+Execucao caso de teste
+US14543
+Data-Entry-Rota para consumir sugestoes
+Data-Entry-Copiar o modal de estabelecimentos
+Data-Entry-Componentizacao de modal de sugestao
+Caso de teste
+Execucao caso de teste

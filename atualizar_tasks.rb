@@ -1,8 +1,8 @@
 require 'rally_rest_api'
 
 # 'Login to the Rally App'
-@user_name = "your_login"
-@password = "your_password"
+@user_name = "your@ema.il"
+@password = "password"
 @base_url = "https://rally1.rallydev.com/slm"
 @rally = RallyRestAPI.new(:base_url => @base_url, :username => @user_name, :password => @password)
 
