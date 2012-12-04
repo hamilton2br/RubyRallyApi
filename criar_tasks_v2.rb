@@ -20,7 +20,9 @@ end
 opts.on('-P password','--password=password','Rally Password') do |pass|
         options.password = pass
 end
-
+opts.on('-F file','--file=file','File where the tasks and status are') do |file|
+        options.file = file
+end
 opts.on_tail( '-h', '--help', 'Displays this screen' ) do
         puts opts
         exit
@@ -100,9 +102,9 @@ end
 #############################################################
 # 		Get the stories from file		    #
 #############################################################
-def GetUserStoriesAndTasksFromFile()
+def GetUserStoriesAndTasksFromFile(taskFile)
 
-	File.open("novas_tarefas_v2.txt", "r") do |infile|
+	File.open(taskFile, "r") do |infile|
 
 	    defect_tasks = Hash.new(Array.new)
 	    us_tasks = Hash.new(Array.new)
@@ -125,6 +127,6 @@ def GetUserStoriesAndTasksFromFile()
 end
 #############################################################
 
-GetUserStoriesAndTasksFromFile()
+GetUserStoriesAndTasksFromFile(option.file)
 
 print "Tarefas criadas com sucesso\n\n"

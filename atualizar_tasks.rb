@@ -20,6 +20,9 @@ end
 opts.on('-P password','--password=password','Rally Password') do |pass|
         options.password = pass
 end
+opts.on('-F file','--file=file','File where the tasks and status are') do |file|
+	options.file = file
+end
 
 opts.on_tail( '-h', '--help', 'Displays this screen' ) do
         puts opts
@@ -67,10 +70,10 @@ end
 #############################################################
 # 		Get tasks and states from file		    #
 #############################################################
-def GetTasksAndNewStatesFromFile()
+def GetTasksAndNewStatesFromFile(taskFile)
 
 	# Example 2 - Pass file to block
-	File.open("tarefas.txt", "r") do |infile|
+	File.open(taskFile, "r") do |infile|
 	    while (line = infile.gets)
 		values = line.strip.split(',')
 		UpdateTask(values[0],values[1])
@@ -79,6 +82,6 @@ def GetTasksAndNewStatesFromFile()
 end
 #############################################################
 
-GetTasksAndNewStatesFromFile()
+GetTasksAndNewStatesFromFile(options.file)
 
 print "Tarefas alteradas com sucesso\n\n"
