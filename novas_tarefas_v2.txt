@@ -1,24 +1,12 @@
-US14543
-Data-Entry-Rota para consumir sugestoes
-Data-Entry-Copiar o modal de estabelecimentos
-Data-Entry-Componentizacao de modal de sugestao
+US14703
+Retirar regra ao salvar matéria
+Testes na API
 Caso de teste
-Execucao caso de teste
-US14543
-Data-Entry-Rota para consumir sugestoes
-Data-Entry-Copiar o modal de estabelecimentos
-Data-Entry-Componentizacao de modal de sugestao
-Caso de teste
-Execucao caso de teste
-US14543
-Data-Entry-Rota para consumir sugestoes
-Data-Entry-Copiar o modal de estabelecimentos
-Data-Entry-Componentizacao de modal de sugestao
-Caso de teste
-Execucao caso de teste
-US14543
-Data-Entry-Rota para consumir sugestoes
-Data-Entry-Copiar o modal de estabelecimentos
-Data-Entry-Componentizacao de modal de sugestao
-Caso de teste
-Execucao caso de teste
+Execução de caso de teste
+US14704
+Script para suprimir tags
+Incrementar script para suprimir HTML entities
+Aplicat Dump de prod e testar script
+ensaio em QA
+Caso de Teste
+Execução de caso de teste

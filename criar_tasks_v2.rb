@@ -1,8 +1,44 @@
 require 'rally_rest_api'
+require 'ostruct'
+require 'optparse'
+
+#getting the options
+options = OpenStruct.new
+options.iteration = ""
+options.user = nil
+options.password = nil
+
+opts = OptionParser.new
+opts.banner = "Usage: criar_tasks_v2 [options]"
+opts.on('-iITERATION','--iteration=ITERATION','Iteration ID (mandatory)') do |iter|
+        options.iteration << iter
+end
+
+opts.on('-U username','--user=username','Rally User') do |user|
+        options.user = user
+end
+opts.on('-P password','--password=password','Rally Password') do |pass|
+        options.password = pass
+end
+
+opts.on_tail( '-h', '--help', 'Displays this screen' ) do
+        puts opts
+        exit
+end
+
+opts.parse!(ARGV)
+
+if options.iteration.empty? then
+        puts opts
+        exit
+else
+        itername = options.iteration
+end
+
 
 # 'Login to the Rally App'
-@user_name = "your@ema.il"
-@password = "password"
+@user_name = options.user
+@password = options.password
 @base_url = "https://rally1.rallydev.com/slm"
 
 #############################################################
