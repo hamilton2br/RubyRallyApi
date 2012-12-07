@@ -127,6 +127,6 @@ def GetUserStoriesAndTasksFromFile(taskFile)
 end
 #############################################################
 
-GetUserStoriesAndTasksFromFile(option.file)
+GetUserStoriesAndTasksFromFile(options.file)
 
 print "Tarefas criadas com sucesso\n\n"
