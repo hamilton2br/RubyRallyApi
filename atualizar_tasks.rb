@@ -10,7 +10,7 @@ options.password = nil
 
 opts = OptionParser.new
 opts.banner = "Usage: atualizar_tasks [options]"
-opts.on('-iITERATION','--iteration=ITERATION','Iteration ID (mandatory)') do |iter|
+opts.on('-iITERATION','--iteration=ITERATION','Iteration ID') do |iter|
         options.iteration << iter
 end
 
