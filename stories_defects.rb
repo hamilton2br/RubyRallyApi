@@ -1,6 +1,8 @@
 require 'rally_rest_api'
 require 'ostruct'
 require 'optparse'
+require 'rubygems'
+require 'gruff'
 
 #getting the options
 options = OpenStruct.new
@@ -73,3 +75,18 @@ puts "Defeitos: " + num_defects.to_s + "\t pontos: " + plan_estimate_defects.to_
 
 puts "% de defeitos na sprint: " + format( "%.2f", ( num_defects.to_f/(num_defects + num_histories).to_f  )*100) + "%"
 puts "% de pontos de defeitos na sprint: " + format( "%.2f", ( plan_estimate_defects/(plan_estimate_defects + plan_estimate_histories).to_f )*100) + "%"
+
+#graph output - por contagem
+g1 = Gruff::Pie.new
+g1.title = "Defect/story distribution (count)"
+g1.data("Historias", num_histories)
+g1.data("Defeitos", num_defects)
+g1.write("./count_distribution.png")
+
+#graph output - por pontos
+g2 = Gruff::Pie.new
+g2.title = "Defect/story distribution (points)"
+g2.data("Historias", plan_estimate_histories)
+g2.data("Defeitos", plan_estimate_defects)
+g2.write("./points_distribution.png")
+

@@ -2,6 +2,8 @@ require 'rally_rest_api'
 require 'date'
 require 'ostruct'
 require 'optparse'
+require 'rubygems'
+require 'gruff'
 
 #getting the options
 options = OpenStruct.new
@@ -108,3 +110,16 @@ puts "Tarefas adicionadas por tag:\n-------------\n"
 				values.each { |value| print "\t" + value + "\n"}
 				print "\n"
 			   }
+
+#graph output - por contagem
+g1 = Gruff::Pie.new
+g1.title = "Added Tasks"
+g1.data("Total Tarefas", @statistics["Totais"][0])
+g1.data("Tarefas Adicionadas", @statistics["Totais"][1])
+g1.write("./added_tasks.png")
+
+#graph output - por contagem
+g2 = Gruff::Pie.new
+g2.title = "Added Tasks"
+@addedTasksByTag.each_pair { |key, values| g2.data(key, values.count) }
+g2.write("./added_tasks_by_tag.png")
