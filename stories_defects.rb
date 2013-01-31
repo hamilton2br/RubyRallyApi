@@ -34,7 +34,7 @@ if options.iteration.empty? then
         puts opts
         exit
 else
-        itername = options.iteration
+        iternames = options.iteration
 end
 
 # 'Login to the Rally App'
@@ -50,25 +50,29 @@ plan_estimate_histories = 0
 
 rally = RallyRestAPI.new(:base_url => @base_url, :username => @user_name, :password => @password)
 
-it_result  = rally.find(:iteration) {equal :object_i_d, itername}
+aIterations = iternames.split(",")
 
-iteration = it_result.results.first
+aIterations.each { |it| it_result  = rally.find(:iteration) {equal :object_i_d, it}
 
-#histórias
-us_result = rally.find(:hierarchical_requirements) {equal :iteration, iteration}
+	iteration = it_result.results.first
 
-us_result.each { |userStory| print ".\n"
-				num_histories = num_histories + 1
-				plan_estimate_histories = plan_estimate_histories + userStory.plan_estimate.to_i
-		 }
+	#histórias
+	us_result = rally.find(:hierarchical_requirements) {equal :iteration, iteration}
 
-#defeitos
-def_result = rally.find(:defect) {equal :iteration, iteration}
+	us_result.each { |userStory| print ".\n"
+					num_histories = num_histories + 1
+					plan_estimate_histories = plan_estimate_histories + userStory.plan_estimate.to_i
+			 }
 
-def_result.each { |defect| print ".\n"
-				num_defects = num_defects + 1
-				plan_estimate_defects = plan_estimate_defects + defect.plan_estimate.to_i
-		} 
+	#defeitos
+	def_result = rally.find(:defect) {equal :iteration, iteration}
+
+	def_result.each { |defect| print ".\n"
+					num_defects = num_defects + 1
+					plan_estimate_defects = plan_estimate_defects + defect.plan_estimate.to_i
+			}
+		}
+
 
 puts "Historias: " + num_histories.to_s + "\t pontos: " + plan_estimate_histories.to_s
 puts "Defeitos: " + num_defects.to_s + "\t pontos: " + plan_estimate_defects.to_s

@@ -35,7 +35,7 @@ if options.iteration.empty? then
         puts opts
         exit
 else
-        itername = options.iteration
+        iternames = options.iteration
 end
 
 # 'Login to the Rally App'
@@ -90,15 +90,16 @@ rally = RallyRestAPI.new(:base_url => @base_url, :username => @user_name, :passw
 
 @statistics["Totais"] = [0,0,"0"]
 
-it_result  = rally.find(:iteration) {equal :object_i_d, itername}
+aIterations = iternames.split(",")
 
-iteration = it_result.results.first
+aIterations.each { |it|	it_result  = rally.find(:iteration) {equal :object_i_d, it}
 
-us_result = rally.find(:hierarchical_requirements) {equal :iteration, iteration}
+	iteration = it_result.results.first
 
-us_result.each { |userStory| BuildStoryStatistics(userStory) }
+	us_result = rally.find(:hierarchical_requirements) {equal :iteration, iteration}
 
-# Imprimindo resultados, objetivo eh gerar PDF
+	us_result.each { |userStory| BuildStoryStatistics(userStory) }
+		}
 
 @statistics.each_key { |key|  print "\n" + key + "\n\t" + "Total Tarefas: " + @statistics[key][0].to_s + "\n\t" + 
 					"Tarefas Adicionadas: " + @statistics[key][1].to_s + "\n\t" + 

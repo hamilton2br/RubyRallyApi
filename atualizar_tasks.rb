@@ -51,7 +51,7 @@ def UpdateTask (task, state)
 
 	query_result = @rally.find(:task) {equal :formatted_i_d, task}
 
-	print "atualizando task " + task
+	if !task.nil? then print "atualizando task " + task end
 
 	aTask = query_result.results.first
 
