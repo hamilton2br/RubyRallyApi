@@ -1,110 +1,72 @@
-DE11279
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE11261
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE11274
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE11272
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE11273
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE11263
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE10530
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE10582
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-DE10477
-Reproduzir
-Investigar
-Corrigir
-Casos de teste
-Testes
-US15561
-Adicionar tooltip
-Criar comportamento checkbox para "minha marca"
-Alterar mecanica de preview de resultados
-Re-validar layout do container de conteudos relacionados selecionados.
-Casos de teste
-Testes
-US15559
-Criação da coluna status
-Padrão sempre disponíveis
-Itens agendados mostram data/hora de agendamento
-Fitro por materias disponíveis e agendadas
-Alerta caso tenha itens agendados selecionados
-Alerta caso tenha mudança na data de agendamento da matéria em edição
-Casos de teste
-Testes
-US14553
-Fazer com que no search o Q componha nome,apelidos e profissao.
-Default disponveis por ordem de disponibilizacao
-Order ASC e DESC Nome,Apelidos e Profissao
-Casos de teste
-Testes
-US16198
-Busca por Q
-Resultado por ordem de relevancia.
-Adicionar link para voltar para listagem.
-Casos de teste
-Testes
-US14543
-Replicar backend de estabelecimento
-Ajuste para campos considerados como duplicados
-Replicar solução de modal de estabelecimentos
-Casos de teste
-Testes
-US16037
-Solicitar maquinas de Stage 
-Configurar máquinas de Stage
-Monitoração e Backup das maquinas de Stage
-Configurar máquinas de Prod
-Monitoração e Backup das maquinas de Prod
-Agentes do Newrelic Stage e Prod
-Configuração dos Mongos Stage e Prod
-Configurar pastas shared dos deploys.
-US13150
-Adicionar indices no mongo
-Adicionar data de edicao impressa como campo ordenavel
-Adicionar data de edicao impressa como passivel de range (incio/fim)
-Alterar descritor de busca
-Casos de teste
-Testes
-US13151
-Adicionar data de edicao impressa como campo ordenavel
-Adicionar data de edicao impressa como passivel de range (incio/fim)
-Alterar descritor de busca
-Casos de teste
-Testes
+DE13713
+Adicionar condição de filtragem na presença do parâmetro
+Notas StepUp
+Atualizar Rally
+US19622
+Criar fontes (Youtube, Vimeo) em todos os ambientes
+Preencher Fonte automaticamente de acordo com URL do vídeo
+Travar edição do campo Fonte no miniform
+Adequar alerta de URL de vídeo não permitida
+Adaptar captação de metadados dos vídeos (Vimeo)
+Notas StepUp
+Review Steps no Rally
+Casos de testes
+Execução de caso de teste
+US19798
+Levantar campos necessários (vide US16189)
+Criar estrutura de campos no Model (MongoMapper)
+Validações básicas de preenchimento
+Validações de unicidade
+Criar camada para mecânica de incremento de nome
+Cobertura de testes
+Documentação no Confluence
+Notas StepUp
+Validação final Arquitetura
+Casos de testes
+Execução de caso de teste
+US16189
+HTML + CSS da tela do Form
+Retirar marcação de campos obrigatórios
+Desabilitar campos
+Modal para captar nome do modelo antes de salvar
+Rota para novo modelo (routes)
+Rota + Controller para criação (submit)
+Incrementar documentação do Confluence
+Notas StepUp
+Review Steps no Rally
+Casos de testes
+Execução de caso de teste
+US16190
+Adequar botão de Nova Matéria (split button)
+HTML do Modal do Gerenciador
+Customizar scroll do modal
+Rota para listagem de modelos do usuário
+Ajax para listar modelos dentro do modal
+Campo de filtragem de modelos
+Adequar rota de Nova Matéria para usar modelo
+Incrementar documentação do Confluence
+Notas StepUp
+Review Steps no Rally
+Casos de testes
+Execução de caso de teste
+US19803
+Rota para editar modelo (routes)
+Campo no form para editar nome do modelo
+Adequar tela de gerenciamento com botões de edição
+Cucumber para os fluxos todos
+Incrementar documentação do Confluence
+Notas StepUp
+Review Steps no Rally
+Casos de testes
+Execução de caso de teste
+US19804
+Adequar tela de gerenciamento com botões de exclusão
+Rota para exclusão de modelo (routes)
+Controller para exclusão do modelo
+Flash message de modelo excluído com sucesso
+Comportamento do botão para excluir modelo
+Incrementar documentação do Confluence
+Notas StepUp
+Review Steps no Rally
+Casos de testes
+Execução de caso de teste

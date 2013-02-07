@@ -1,0 +1,14 @@
+2013-02-04
+[Defined],2
+2013-02-05
+[Released],1
+[In-Progress],2
+[Defined],4
+2013-02-06
+[Released],1
+[In-Progress],3
+[Defined],4
+2013-02-07
+[Released],1
+[In-Progress],3
+[Defined],4
